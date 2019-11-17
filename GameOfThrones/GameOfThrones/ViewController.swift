@@ -29,6 +29,15 @@ class ViewController: UIViewController {
         episodes = GOTEpisode.getSections()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard let episodeVC = segue.destination as? EpisodeViewController, let indexPath = gotTableView.indexPathForSelectedRow else {
+            return
+        }
+        
+        episodeVC.episode = episodes[indexPath.section][indexPath.row]
+    }
+    
     
 }
 
@@ -44,7 +53,21 @@ extension ViewController: UITableViewDataSource {
         let cell = gotTableView.dequeueReusableCell(withIdentifier: "gotCell", for: indexPath)
         let episode = episodes[indexPath.section][indexPath.row]
         
+        cell.textLabel?.text = episode.name
+        cell.detailTextLabel?.text = "S:\(episode.season)" + " E:\(episode.number)"
+        
+        cell.imageView?.image = UIImage(named: episode.mediumImageID)
+        
         return cell
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return episodes.count
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let seasonString = "Season \(String(episodes[section].first?.season ?? 0))"
+        return seasonString
     }
 }
 
