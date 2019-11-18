@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		02571C182381F5AF008F92AD /* EpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02571C172381F5AF008F92AD /* EpisodeViewController.swift */; };
+		028F5553238321C800D65E65 /* EpisodeCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028F5552238321C800D65E65 /* EpisodeCellTableViewCell.swift */; };
+		028F555723832DDE00D65E65 /* EpisodeRightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028F555623832DDE00D65E65 /* EpisodeRightCell.swift */; };
 		57D0D22A219F70EA00B5753A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D0D229219F70EA00B5753A /* AppDelegate.swift */; };
 		57D0D22C219F70EA00B5753A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D0D22B219F70EA00B5753A /* ViewController.swift */; };
 		57D0D22F219F70EA00B5753A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57D0D22D219F70EA00B5753A /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		02571C172381F5AF008F92AD /* EpisodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewController.swift; sourceTree = "<group>"; };
+		028F5552238321C800D65E65 /* EpisodeCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeCellTableViewCell.swift; sourceTree = "<group>"; };
+		028F555623832DDE00D65E65 /* EpisodeRightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeRightCell.swift; sourceTree = "<group>"; };
 		57D0D226219F70EA00B5753A /* GameOfThrones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameOfThrones.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D0D229219F70EA00B5753A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57D0D22B219F70EA00B5753A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 				57D0D229219F70EA00B5753A /* AppDelegate.swift */,
 				57D0D22B219F70EA00B5753A /* ViewController.swift */,
 				02571C172381F5AF008F92AD /* EpisodeViewController.swift */,
+				028F5552238321C800D65E65 /* EpisodeCellTableViewCell.swift */,
+				028F555623832DDE00D65E65 /* EpisodeRightCell.swift */,
 				57D0D22D219F70EA00B5753A /* Main.storyboard */,
 				57D0D23B219F719C00B5753A /* GOTEpisdoe.swift */,
 				57D0D230219F70EA00B5753A /* Assets.xcassets */,
@@ -143,6 +149,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				57D0D23C219F719C00B5753A /* GOTEpisdoe.swift in Sources */,
+				028F5553238321C800D65E65 /* EpisodeCellTableViewCell.swift in Sources */,
+				028F555723832DDE00D65E65 /* EpisodeRightCell.swift in Sources */,
 				57D0D22C219F70EA00B5753A /* ViewController.swift in Sources */,
 				02571C182381F5AF008F92AD /* EpisodeViewController.swift in Sources */,
 				57D0D22A219F70EA00B5753A /* AppDelegate.swift in Sources */,
