@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var gotTableView: UITableView!
     
+    @IBOutlet weak var searchBar: UISearchBar!
     
     private var episodes = [[GOTEpisode]]() {
         didSet {
@@ -19,9 +20,20 @@ class ViewController: UIViewController {
         }
     }
     
+    var searchInput = ""  {
+        didSet {
+            episodes = GOTEpisode.getSections(searched)
+        }
+    }
+    
+    var searched: [GOTEpisode] {
+        return GOTEpisode.allEpisodes.filter { $0.name.contains(searchInput) }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        searchBar.delegate = self
         gotTableView.dataSource = self
         loadData()
         
@@ -30,7 +42,7 @@ class ViewController: UIViewController {
     }
     
     func loadData() {
-        episodes = GOTEpisode.getSections()
+        episodes = GOTEpisode.getSections(GOTEpisode.allEpisodes)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -40,6 +52,10 @@ class ViewController: UIViewController {
         }
         
         episodeVC.episode = episodes[indexPath.section][indexPath.row]
+    }
+    
+    func search() {
+        
     }
     
     
@@ -70,14 +86,6 @@ extension ViewController: UITableViewDataSource {
             return cellTwo
         }
         
-//        let cell = gotTableView.dequeueReusableCell(withIdentifier: "gotCell", for: indexPath)
-//        let episode = episodes[indexPath.section][indexPath.row]
-//
-//        cell.textLabel?.text = episode.name
-//        cell.detailTextLabel?.text = "S:\(episode.season)" + " E:\(episode.number)"
-//
-//        cell.imageView?.image = UIImage(named: episode.mediumImageID)
-        
     }
     
     
@@ -88,6 +96,32 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let seasonString = "Season \(String(episodes[section].first?.season ?? 0))"
         return seasonString
+    }
+}
+
+extension ViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+                
+        let  char = searchText.cString(using: String.Encoding.utf8)!
+        let isBackSpace = strcmp(char, "\\b")
+        
+        if !searchText.isEmpty {
+            if isBackSpace == -92 {
+                searchInput.removeLast()
+            }
+        }
+        searchInput = searchText.lowercased()
+        
+        if searchText.isEmpty {
+            loadData()
+        }
+
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        searchInput = searchBar.text ?? ""
     }
 }
 

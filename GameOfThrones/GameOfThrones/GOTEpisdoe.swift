@@ -100,10 +100,10 @@ class GOTEpisode {
         GOTEpisode(airdate: "2017-08-27", id: 1221415, name: "The Dragon and the Wolf", number: 7, season: 7, runtime: 60, summary: "Cersei sits on the Iron Throne; Daenerys sails across the Narrow Sea; Jon Snow is King in the North, and winter is finally here.", mediumImageID: "314502", originalImageID: "314502")
     ]
     
-    static func getSections() -> [[GOTEpisode]] {
-        let sortedSeasons = allEpisodes.sorted { $0.season < $1.season }
+    static func getSections(_ episodeArr: [GOTEpisode]) -> [[GOTEpisode]] {
+        let sortedSeasons = episodeArr.sorted { $0.season < $1.season }
         
-        let episodeTitles: Set<Int> = Set(allEpisodes.map { $0.season })
+        let episodeTitles: Set<Int> = Set(episodeArr.map { $0.season })
         
         var sectionsArr = Array(repeating: [GOTEpisode](), count: episodeTitles.count)
         
