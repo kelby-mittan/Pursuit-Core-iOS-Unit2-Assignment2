@@ -22,12 +22,12 @@ class ViewController: UIViewController {
     
     var searchInput = ""  {
         didSet {
-            episodes = GOTEpisode.getSections(searched)
+            episodes = GOTEpisode.getSections(episodeArrUpdate)
         }
     }
     
-    var searched: [GOTEpisode] {
-        return GOTEpisode.allEpisodes.filter { $0.name.contains(searchInput) }
+    var episodeArrUpdate: [GOTEpisode] {
+        return GOTEpisode.allEpisodes.filter { $0.name.lowercased().contains(searchInput) }
     }
     
     override func viewDidLoad() {
@@ -88,7 +88,6 @@ extension ViewController: UITableViewDataSource {
         
     }
     
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return episodes.count
     }
@@ -100,6 +99,11 @@ extension ViewController: UITableViewDataSource {
 }
 
 extension ViewController: UISearchBarDelegate {
+    
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        loadData()
+        return true
+    }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
                 
@@ -121,7 +125,22 @@ extension ViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
-        searchInput = searchBar.text ?? ""
+        
+        if let searchText = searchBar.text {
+            searchInput = searchText.lowercased()
+            
+            if searchText.isEmpty {
+                loadData()
+            }
+            searchBar.text = ""
+        }
+
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        searchInput = ""
+        loadData()
     }
 }
 
