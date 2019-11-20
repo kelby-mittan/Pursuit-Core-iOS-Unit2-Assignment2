@@ -20,29 +20,29 @@
                                 <rect key="frame" x="0.0" y="144" width="375" height="634"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="gotCell" rowHeight="179" id="AYP-li-M0E" customClass="EpisodeCellTableViewCell" customModule="GameOfThrones" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="179"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="gotCell" rowHeight="120" id="AYP-li-M0E" customClass="EpisodeCellTableViewCell" customModule="GameOfThrones" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AYP-li-M0E" id="k1H-eH-6ir">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="179"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XjI-93-JFR">
-                                                    <rect key="frame" x="19" y="44.666666666666657" width="150" height="90"/>
+                                                    <rect key="frame" x="15" y="15" width="150" height="90"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="150" id="9Ja-dl-qed"/>
                                                         <constraint firstAttribute="height" constant="90" id="y94-GL-QnI"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S: E:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xr3-8O-NHE">
-                                                    <rect key="frame" x="177" y="79" width="175" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="173" y="51" width="179" height="18"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CV4-Y3-rtL">
-                                                    <rect key="frame" x="177" y="21" width="175" height="50"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="173" y="13" width="179" height="30"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -51,10 +51,10 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="CV4-Y3-rtL" secondAttribute="trailing" constant="8" id="1X6-tO-1cc"/>
                                                 <constraint firstItem="CV4-Y3-rtL" firstAttribute="leading" secondItem="XjI-93-JFR" secondAttribute="trailing" constant="8" id="5EI-Rb-uT3"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="xr3-8O-NHE" secondAttribute="trailing" constant="8" id="5a9-di-xuD"/>
-                                                <constraint firstItem="CV4-Y3-rtL" firstAttribute="top" secondItem="k1H-eH-6ir" secondAttribute="topMargin" constant="10" id="D3X-8o-aRo"/>
+                                                <constraint firstItem="CV4-Y3-rtL" firstAttribute="top" secondItem="k1H-eH-6ir" secondAttribute="topMargin" constant="2" id="D3X-8o-aRo"/>
                                                 <constraint firstItem="xr3-8O-NHE" firstAttribute="centerY" secondItem="XjI-93-JFR" secondAttribute="centerY" id="GZz-3u-MnB"/>
                                                 <constraint firstItem="xr3-8O-NHE" firstAttribute="top" secondItem="CV4-Y3-rtL" secondAttribute="bottom" constant="8" id="HFC-JE-o5j"/>
-                                                <constraint firstItem="XjI-93-JFR" firstAttribute="leading" secondItem="k1H-eH-6ir" secondAttribute="leadingMargin" constant="4" id="Q7o-xh-6cn"/>
+                                                <constraint firstItem="XjI-93-JFR" firstAttribute="leading" secondItem="k1H-eH-6ir" secondAttribute="leadingMargin" id="Q7o-xh-6cn"/>
                                                 <constraint firstItem="xr3-8O-NHE" firstAttribute="leading" secondItem="XjI-93-JFR" secondAttribute="trailing" constant="8" id="dEa-9e-bot"/>
                                                 <constraint firstItem="XjI-93-JFR" firstAttribute="centerY" secondItem="k1H-eH-6ir" secondAttribute="centerY" id="gmb-Tt-rqI"/>
                                             </constraints>
@@ -66,29 +66,29 @@
                                             <segue destination="X95-WO-hm5" kind="show" id="G29-4U-yAv"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="gotCellTwo" rowHeight="158" id="eXX-uL-MRw" customClass="EpisodeRightCell" customModule="GameOfThrones" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="207" width="375" height="158"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="gotCellTwo" rowHeight="140" id="eXX-uL-MRw" customClass="EpisodeRightCell" customModule="GameOfThrones" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="148" width="375" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eXX-uL-MRw" id="4IM-Yd-ZNF">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="158"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="27R-ib-9lA">
-                                                    <rect key="frame" x="214" y="34" width="150" height="90"/>
+                                                    <rect key="frame" x="210" y="25" width="150" height="90"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="90" id="D5c-Kt-5Ev"/>
                                                         <constraint firstAttribute="width" constant="150" id="o8w-G5-Txv"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhj-lc-9Qr">
-                                                    <rect key="frame" x="23" y="20.999999999999996" width="183" height="39.666666666666657"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="23" y="13" width="179" height="40"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S: E:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oem-va-Vng">
-                                                    <rect key="frame" x="23" y="68.666666666666671" width="183" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="23" y="61" width="179" height="18"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -100,8 +100,8 @@
                                                 <constraint firstItem="27R-ib-9lA" firstAttribute="leading" secondItem="yhj-lc-9Qr" secondAttribute="trailing" constant="8" id="EG5-Cw-tuk"/>
                                                 <constraint firstItem="Oem-va-Vng" firstAttribute="top" secondItem="yhj-lc-9Qr" secondAttribute="bottom" constant="8" id="TBD-xP-OfD"/>
                                                 <constraint firstItem="Oem-va-Vng" firstAttribute="leading" secondItem="4IM-Yd-ZNF" secondAttribute="leadingMargin" constant="8" id="Vzm-be-4f8"/>
-                                                <constraint firstItem="yhj-lc-9Qr" firstAttribute="top" secondItem="4IM-Yd-ZNF" secondAttribute="topMargin" constant="10" id="WQU-bp-hWo"/>
-                                                <constraint firstItem="27R-ib-9lA" firstAttribute="trailing" secondItem="4IM-Yd-ZNF" secondAttribute="trailingMargin" constant="4" id="YEF-1R-oQb"/>
+                                                <constraint firstItem="yhj-lc-9Qr" firstAttribute="top" secondItem="4IM-Yd-ZNF" secondAttribute="topMargin" constant="2" id="WQU-bp-hWo"/>
+                                                <constraint firstItem="27R-ib-9lA" firstAttribute="trailing" secondItem="4IM-Yd-ZNF" secondAttribute="trailingMargin" id="YEF-1R-oQb"/>
                                                 <constraint firstItem="27R-ib-9lA" firstAttribute="leading" secondItem="Oem-va-Vng" secondAttribute="trailing" constant="8" id="leR-Xa-Sdx"/>
                                             </constraints>
                                         </tableViewCellContentView>

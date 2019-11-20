@@ -21,7 +21,8 @@ class EpisodeRightCell: UITableViewCell {
     
     
     func configureCell(for episode: GOTEpisode) {
-        gotImage.image = UIImage(named: episode.mediumImageID)
+        gotImage?.layer.cornerRadius = 7
+        gotImage?.image = UIImage(named: episode.mediumImageID)
         titleLabel?.text = episode.name
         episodeLabel?.text = "S:\(episode.season) E:\(episode.number)"
     }

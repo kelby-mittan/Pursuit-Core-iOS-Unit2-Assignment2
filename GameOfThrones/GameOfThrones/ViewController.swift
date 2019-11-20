@@ -37,8 +37,6 @@ class ViewController: UIViewController {
         gotTableView.dataSource = self
         loadData()
         
-        gotTableView.dequeueReusableCell(withIdentifier: "gotCell")?.textLabel?.textAlignment = .center
-        gotTableView.dequeueReusableCell(withIdentifier: "gotCell")?.detailTextLabel?.textAlignment = .center
     }
     
     func loadData() {
@@ -51,13 +49,8 @@ class ViewController: UIViewController {
             return
         }
         
-        episodeVC.episode = episodes[indexPath.section][indexPath.row]
+        episodeVC.gotEpisode = episodes[indexPath.section][indexPath.row]
     }
-    
-    func search() {
-        
-    }
-    
     
 }
 
@@ -71,16 +64,16 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let episode = episodes[indexPath.section][indexPath.row]
-
+        
         if episode.season % 2 == 0 {
             guard let cellOne = gotTableView.dequeueReusableCell(withIdentifier: "gotCellTwo", for: indexPath) as? EpisodeRightCell else {
-            fatalError()
+                fatalError()
             }
             cellOne.configureCell(for: episode)
             return cellOne
         } else {
             guard let cellTwo = gotTableView.dequeueReusableCell(withIdentifier: "gotCell", for: indexPath) as? EpisodeCellTableViewCell else {
-            fatalError()
+                fatalError()
             }
             cellTwo.configureCell(for: episode)
             return cellTwo
@@ -106,7 +99,7 @@ extension ViewController: UISearchBarDelegate {
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-                
+        
         let  char = searchText.cString(using: String.Encoding.utf8)!
         let isBackSpace = strcmp(char, "\\b")
         
@@ -125,7 +118,6 @@ extension ViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
-        
         if let searchText = searchBar.text {
             searchInput = searchText.lowercased()
             

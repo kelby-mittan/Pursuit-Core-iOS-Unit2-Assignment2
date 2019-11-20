@@ -18,11 +18,15 @@ class EpisodeViewController: UIViewController {
     @IBOutlet weak var airdateLabel: UILabel!
     @IBOutlet weak var descriptionText: UITextView!
     
-    var episode: GOTEpisode!
+    var gotEpisode: GOTEpisode?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        guard let episode = gotEpisode else {
+            fatalError()
+        }
+        
         episodeImage.layer.cornerRadius = 10
         episodeImage.image = UIImage(named: episode.originalImageID)
         titleLabel.text = episode.name
