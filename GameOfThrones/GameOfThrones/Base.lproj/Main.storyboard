@@ -66,7 +66,7 @@
                                             <segue destination="X95-WO-hm5" kind="show" id="G29-4U-yAv"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="gotCellTwo" rowHeight="140" id="eXX-uL-MRw" customClass="EpisodeRightCell" customModule="GameOfThrones" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="gotCellTwo" rowHeight="140" id="eXX-uL-MRw" customClass="EpisodeCellTableViewCell" customModule="GameOfThrones" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="148" width="375" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eXX-uL-MRw" id="4IM-Yd-ZNF">
@@ -106,9 +106,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="episodeLabel" destination="Oem-va-Vng" id="rEf-nx-IG2"/>
-                                            <outlet property="gotImage" destination="27R-ib-9lA" id="aU2-Jr-zDP"/>
-                                            <outlet property="titleLabel" destination="yhj-lc-9Qr" id="Hxj-rk-u91"/>
+                                            <outlet property="episodeLabel" destination="Oem-va-Vng" id="YHn-8C-rHp"/>
+                                            <outlet property="gotImage" destination="27R-ib-9lA" id="ggA-tt-RYg"/>
+                                            <outlet property="titleLabel" destination="yhj-lc-9Qr" id="Oyd-is-ULB"/>
                                             <segue destination="X95-WO-hm5" kind="show" id="DVj-tG-LP7"/>
                                         </connections>
                                     </tableViewCell>

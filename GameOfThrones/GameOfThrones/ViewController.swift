@@ -66,7 +66,7 @@ extension ViewController: UITableViewDataSource {
         let episode = episodes[indexPath.section][indexPath.row]
         
         if episode.season % 2 == 0 {
-            guard let cellOne = gotTableView.dequeueReusableCell(withIdentifier: "gotCellTwo", for: indexPath) as? EpisodeRightCell else {
+            guard let cellOne = gotTableView.dequeueReusableCell(withIdentifier: "gotCellTwo", for: indexPath) as? EpisodeCellTableViewCell else {
                 fatalError()
             }
             cellOne.configureCell(for: episode)
